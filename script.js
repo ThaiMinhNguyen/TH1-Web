@@ -11,8 +11,8 @@ function layThongtin() {
     console.log(ten, dob, masv, malop);
     localStorage.setItem('name', ten);
     localStorage.setItem('dob', dob);
-    localStorage.setItem('studentId', studentId);
-    localStorage.setItem('class', classValue);
+    localStorage.setItem('studentId', masv);
+    localStorage.setItem('class', malop);
 }
 
 
