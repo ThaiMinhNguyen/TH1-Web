@@ -19,14 +19,28 @@
         }
     </script>
     <!------------------------------------------------>
-    <title>Đăng nhập</title>
+    <title>Kết quả</title>
 </head>
 
 <body>
-    <h1>Kết quả của bạn</h1>
-    <div>
-        
+    <div class="container">
+        <h1>Kết quả bài test</h1>
+        <p>Điểm của bạn là: <strong><span id="diemso"></span>/30</strong></p>
+        <h2>Kết quả câu hỏi tự luận</h2>
+        <div id = "ketQuaQ4"></div>
+        <button type="button" class="btn btn-primary" id="retry-button">Làm lại bài test</button>
     </div>
+
+    <script src="script.js"></script>
+    <script>
+        // tinhDiem();
+        
+        document.getElementById("diemso").innerHTML = localStorage.getItem("diemtong");
+        document.getElementById("ketQuaQ4").innerHTML = localStorage.getItem("ketquaQ4");
+        console.log(localStorage.getItem("ketquaQ4"))
+        console.log(localStorage.getItem("diemtong"))
+    </script>
+    </script>
 </body>
 
 </html>

@@ -23,6 +23,9 @@
 </head>
 
 <body class="row justify-content-center align-items-center tw-bg-purple-500">
+    <div class="fixed-top container">
+        <div class = "m-2 card tw-w-28"><h4 class="text-center">Time left<br><span id="timer">45:00</span></h4></div>
+    </div>
     <div class="card col-md-6">
         <form action="#">
             <ol style="list-style-type:none;">
@@ -57,7 +60,7 @@
             </ol>
 
             <div class="d-flex justify-content-end m-3">
-                <button type="submit">Nộp bài</button>
+                <button type="submit" onclick="tinhDiem()" formaction="ketqua.html">Nộp bài</button>
             </div>
         </form>
         <!-- <button type="submit" id="show-answers-button" onclick="tinhDiem()">Hiển thị đáp án đã chọn</button>
@@ -72,6 +75,33 @@
     <script src="script.js"></script>
     <script>
         taoCauHoi();
+        var timeLimitInMinutes = 45;
+        var timeLimitInSeconds = timeLimitInMinutes * 60;
+        var timerElement = document.getElementById('timer');
+
+        function startTimer() {
+            timeLimitInSeconds--;
+            var minutes = Math.floor(timeLimitInSeconds / 60);
+            var seconds = timeLimitInSeconds % 60;
+
+            if (timeLimitInSeconds < 0) {
+                timerElement.textContent = '00:00';
+                clearInterval(timerInterval);
+                return;
+            }
+
+            if (minutes < 10) {
+                minutes = '0' + minutes;
+            }
+            if (seconds < 10) {
+                seconds = '0' + seconds;
+            }
+
+            timerElement.textContent = minutes + ':' + seconds;
+        }
+
+        var timerInterval = setInterval(startTimer, 1000);
+
     </script>
 </body>
 

@@ -17,73 +17,7 @@ function layThongtin() {
 
 
 
-function tinhDiem() {
-    let score = 0;
-    const answerKeys = [
-        //đáp án câu hỏi 1
-        "true",
-        "true",
-        "false",
-        "true",
-        "true",
-        "false",
-        "true",
-        "false",
-        "false",
-        "false",
-        //đáp án câu hỏi 2
-        "1", "2", "1", "3", "1", "1", "1", "1", "1", "1",
-        //đáp án câu hỏi 3
-        "13", "24", "14", "1234", "123", "2", "134", "1", "123", "124"
-    ]
-    const answerChoose = [];
-    const answersModal = document.getElementById('answers-modal');
-    const answersList = document.getElementById('answers-list');
-    for (var i = 1; i <= 2; i++) {
-        const radios = document.querySelectorAll(`input[class="group${i}"]`);
-        // Lặp qua tất cả radio button
-        for (const radio of radios) {
-            if (radio.checked) {
-                answerChoose.push(radio.value);
 
-            }
-        }
-    }
-
-    for (let i = 21; i <= 30; i++) {
-        var checkboxes = document.querySelectorAll(`input[class="group3"][name="q${i}"]`);
-        var res = "";
-        for (const checkbox of checkboxes) {
-            if (checkbox.checked) {
-                res += checkbox.value;
-            }
-        }
-        answerChoose.push(res);
-    }
-
-    console.log(answerChoose)
-
-    // answersList.innerHTML = '';
-    // for (const answer of answerChoose) {
-    //     const listItem = document.createElement('li');
-    //     listItem.textContent = answer;
-    //     answersList.appendChild(listItem);
-    // }
-
-    for(let i = 0; i <30; i++){
-        if(answerKeys[i] === answerChoose[i]){
-            score += 1;
-        }
-    }
-    
-    // console.log(answerKeys[29], answerChoose[29]);
-
-    // const pointDisplay = document.getElementById("your-point");
-    // pointDisplay.textContent = score;
-
-    localStorage.setItem('diemtong', score);
-
-};
 
 const nhom1 = document.getElementById('nhom1');
 const nhom2 = document.getElementById('nhom2');
@@ -346,10 +280,92 @@ function taoCauHoi() {
     });
 };
 
+function tinhDiem() {
+    let score = 0;
+    const answerKeys = [
+        //đáp án câu hỏi 1
+        "true",
+        "true",
+        "false",
+        "true",
+        "true",
+        "false",
+        "true",
+        "false",
+        "false",
+        "false",
+        //đáp án câu hỏi 2
+        "1", "2", "1", "3", "1", "1", "1", "1", "1", "1",
+        //đáp án câu hỏi 3
+        "13", "24", "14", "1234", "123", "2", "134", "1", "123", "124"
+    ]
+    const answerChoose = [];
+    const answersModal = document.getElementById('answers-modal');
+    const answersList = document.getElementById('answers-list');
+    for (var i = 1; i <= 2; i++) {
+        const radios = document.querySelectorAll(`input[class="group${i}"]`);
+        // Lặp qua tất cả radio button
+        for (const radio of radios) {
+            if (radio.checked) {
+                answerChoose.push(radio.value);
 
-// localStorage.getItem('name')
-// var pathname = window.location.pathname;
-// if (pathname == "./dethi.html") {
-//     taoCauHoi();
-// };
+            }
+        }
+
+    }
+
+    for (let i = 21; i <= 30; i++) {
+        var checkboxes = document.querySelectorAll(`input[class="group3"][name="q${i}"]`);
+        var res = "";
+        for (const checkbox of checkboxes) {
+            if (checkbox.checked) {
+                res += checkbox.value;
+            }
+        }
+        answerChoose.push(res);
+    }
+
+    console.log(answerChoose)
+
+    // answersList.innerHTML = '';
+    // for (const answer of answerChoose) {
+    //     const listItem = document.createElement('li');
+    //     listItem.textContent = answer;
+    //     answersList.appendChild(listItem);
+    // }
+
+    for (let i = 0; i < 30; i++) {
+        if (answerKeys[i] === answerChoose[i]) {
+            score += 1;
+        }
+    }
+
+
+    localStorage.setItem('diemtong', score);
+
+    const answers = [];
+    questions4.forEach(function (question, index) {
+        const answerElement = document.querySelector(`textarea[name="q${index + 31}"]`);
+        answers.push(answerElement.value);
+    });
+
+    var resultHtml = "";
+
+    for (let i = 0; i < answers.length; i++) {
+        const questionText = questions4[i].q;
+        const answerText = answers[i];
+
+        resultHtml += `
+          <p>Câu hỏi ${i + 31}: ${questionText}</p>
+          <p>Bài làm của bạn: </p>
+          <p>${answerText}</p>
+          <p>Đáp án: </p>
+          <p>${questions4[i].a}</p>
+        `;
+
+        // In ra HTML kết quả
+        localStorage.setItem('ketquaQ4', resultHtml);
+    }
+
+};
 
