@@ -187,6 +187,14 @@ questions3 = [
 questions4 = [
     { q: "Đây là một câu hỏi", a: "Đây là đáp án" },
     { q: "Đây là một câu hỏi 2", a: "Đây là đáp án 2" },
+    { q: "Đây là một câu hỏi 3", a: "Đây là đáp án 3" },
+    { q: "Đây là một câu hỏi 4", a: "Đây là đáp án 4" },
+    { q: "Đây là một câu hỏi 5", a: "Đây là đáp án 5" },
+    { q: "Đây là một câu hỏi 6", a: "Đây là đáp án 6" },
+    { q: "Đây là một câu hỏi 7", a: "Đây là đáp án 7" },
+    { q: "Đây là một câu hỏi 8", a: "Đây là đáp án 8" },
+    { q: "Đây là một câu hỏi 9", a: "Đây là đáp án 9" },
+    { q: "Đây là một câu hỏi 10", a: "Đây là đáp án 10" },
 ]
 
 function taoCauHoi() {
