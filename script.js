@@ -348,8 +348,8 @@ function taoCauHoi() {
 
 
 // localStorage.getItem('name')
-var pathname = window.location.pathname;
-if (pathname == "./dethi.html") {
-    taoCauHoi();
-};
+// var pathname = window.location.pathname;
+// if (pathname == "./dethi.html") {
+//     taoCauHoi();
+// };
 
