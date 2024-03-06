@@ -362,10 +362,8 @@ function tinhDiem() {
           <p>Đáp án: </p>
           <p>${questions4[i].a}</p>
         `;
-
-        // In ra HTML kết quả
-        localStorage.setItem('ketquaQ4', resultHtml);
+        
     }
-
+    localStorage.setItem('ketquaQ4', resultHtml);
 };
 
