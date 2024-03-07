@@ -36,13 +36,15 @@
                 <div id='nhom1'>
 
                 </div>
+                <hr>
                 <div class="card-header bg-white">
                     <h2>10 câu hỏi trắc nghiệm 4 lựa chọn</h2>
                 </div>
                 <br>
                 <div id='nhom2'>
 
-                </div>
+                </div>\
+                <hr>
                 <div class="card-header bg-white">
                     <h2>10 câu hỏi trắc nghiệm chọn nhiều trong 4 lựa chọn</h2>
                 </div>
@@ -50,6 +52,7 @@
                 <div id='nhom3'>
 
                 </div>
+                <hr>
                 <div class="card-header bg-white">
                     <h2>10 câu hỏi tự luận</h2>
                 </div>
@@ -60,7 +63,7 @@
             </ol>
 
             <div class="d-flex justify-content-end m-3">
-                <button type="submit" onclick="tinhDiem()" formaction="ketqua.html">Nộp bài</button>
+                <button type="submit" onclick="tinhDiem()" id="nop_bai" formaction="ketqua.html">Nộp bài</button>
             </div>
         </form>
             <!-- <button type="submit" id="show-answers-button" onclick="tinhDiem()">Hiển thị đáp án đã chọn</button>
@@ -86,6 +89,8 @@
 
             if (timeLimitInSeconds < 0) {
                 timerElement.textContent = '00:00';
+                var SubmitBtn = document.getElementById('nop_bai');
+                SubmitBtn.click();
                 clearInterval(timerInterval);
                 return;
             }
