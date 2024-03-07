@@ -377,6 +377,7 @@ function tinhDiem() {
           <p>${answerText}</p>
           <p>Đáp án: </p>
           <p>${questions4[i].a}</p>
+          <hr>
         `;
         
     }
