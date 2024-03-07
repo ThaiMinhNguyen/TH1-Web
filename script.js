@@ -221,22 +221,26 @@ function taoCauHoi() {
         listItem.innerHTML = `
             <li>
             <p>Câu ${index + 1}: ${question.q}</p>
-            <div class="d-flex justify-content-between w-50">
+            <div class = "row">
+            <div class="col-sm-5">
                 <div>
                     <input type="radio" name="q${index + 11}" value="1" class="group2" >&nbsp;${question.a}
                 </div>
+                <br>
                 <div>
                     <input type="radio" name="q${index + 11}" value="2" class="group2" >&nbsp;${question.b}
                 </div>
             </div>
             <br>
-            <div class="d-flex justify-content-between w-50">
+            <div class="col-sm-5">
                 <div>
                     <input type="radio" name="q${index + 11}" value="3" class="group2" >&nbsp;${question.c}
                 </div>
+                <br>
                 <div>
                     <input type="radio" name="q${index + 11}" value="4" class="group2" >&nbsp;${question.d}
                 </div>
+            </div>
             </div>
         </li>
         <br>   
@@ -249,23 +253,27 @@ function taoCauHoi() {
         listItem.innerHTML = `
             <li>
             <p>Câu ${index + 1}: ${question.q}</p>
-            <div class="d-flex justify-content-between w-50">
+            <div class="row">
+            <div class="col-sm-5">
                 <div>
                     <input type="checkbox" name="q${index + 21}" class = "group3" value="1">&nbsp;${question.a}
                 </div>
+                <br>
                 <div>
                     <input type="checkbox" name="q${index + 21}" class = "group3" value="2">&nbsp;${question.b}
                 </div>
             </div>
             <br>
-            <div class="d-flex justify-content-between w-50">
+            <div class="col-sm-5">
                 <div>
                     <input type="checkbox" name="q${index + 21}" class = "group3" value="3">&nbsp;${question.c}
                 </div>
+                <br>    
                 <div>
                     <input type="checkbox" name="q${index + 21}" class = "group3" value="4">&nbsp;${question.d}
                 </div>
             </div>
+            <div>
         </li>
         <br>   
         `;
