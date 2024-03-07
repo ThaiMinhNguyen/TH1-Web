@@ -205,10 +205,10 @@ function taoCauHoi() {
             <p>Câu ${index + 1}:  ${question.q}</p>
             <div class="d-flex justify-content-between w-50">
                 <div>
-                    <input type="radio" name="q${index + 1}" value="true" class="group1" required>&nbsp;${question.a}
+                    <input type="radio" name="q${index + 1}" value="true" class="group1" >&nbsp;${question.a}
                 </div>
                 <div>
-                    <input type="radio" name="q${index + 1}" value="false" class="group1" required>&nbsp;${question.b}
+                    <input type="radio" name="q${index + 1}" value="false" class="group1">&nbsp;${question.b}
                 </div>
             </div>
             <br>    
@@ -223,19 +223,19 @@ function taoCauHoi() {
             <p>Câu ${index + 1}: ${question.q}</p>
             <div class="d-flex justify-content-between w-50">
                 <div>
-                    <input type="radio" name="q${index + 11}" value="1" class="group2" required>&nbsp;${question.a}
+                    <input type="radio" name="q${index + 11}" value="1" class="group2" >&nbsp;${question.a}
                 </div>
                 <div>
-                    <input type="radio" name="q${index + 11}" value="2" class="group2" required>&nbsp;${question.b}
+                    <input type="radio" name="q${index + 11}" value="2" class="group2" >&nbsp;${question.b}
                 </div>
             </div>
             <br>
             <div class="d-flex justify-content-between w-50">
                 <div>
-                    <input type="radio" name="q${index + 11}" value="3" class="group2" required>&nbsp;${question.c}
+                    <input type="radio" name="q${index + 11}" value="3" class="group2" >&nbsp;${question.c}
                 </div>
                 <div>
-                    <input type="radio" name="q${index + 11}" value="4" class="group2" required>&nbsp;${question.d}
+                    <input type="radio" name="q${index + 11}" value="4" class="group2" >&nbsp;${question.d}
                 </div>
             </div>
         </li>
@@ -310,20 +310,20 @@ function tinhDiem() {
     const answerChoose = [];
     const answersModal = document.getElementById('answers-modal');
     const answersList = document.getElementById('answers-list');
-    for (var i = 1; i <= 2; i++) {
-        const radios = document.querySelectorAll(`input[class="group${i}"]`);
-        // Lặp qua tất cả radio button
-        for (const radio of radios) {
-            if (radio.checked) {
-                answerChoose.push(radio.value);
+    // for (var i = 1; i <= 2; i++) {
+    //     const radios = document.querySelectorAll(`input[class="group${i}"]`);
+    //     // Lặp qua tất cả radio button
+    //     for (const radio of radios) {
+    //         if (radio.checked) {
+    //             answerChoose.push(radio.value);
 
-            }
-        }
+    //         }
+    //     }
 
-    }
+    // }
 
-    for (let i = 21; i <= 30; i++) {
-        var checkboxes = document.querySelectorAll(`input[class="group3"][name="q${i}"]`);
+    for (let i = 1; i <= 30; i++) {
+        var checkboxes = document.querySelectorAll(`input[name="q${i}"]`);
         var res = "";
         for (const checkbox of checkboxes) {
             if (checkbox.checked) {
