@@ -1,18 +1,18 @@
 var ten = "";
 var dob = "";
-var masv = "";
-var malop = "";
+var cccd = "";
+var diachi = "";
 
 function layThongtin() {
     ten = document.getElementById('name').value;
     dob = document.getElementById('dob').value;
-    masv = document.getElementById('student-id').value;
-    malop = document.getElementById("class").value;
-    console.log(ten, dob, masv, malop);
+    cccd = document.getElementById('cccd').value;
+    diachi = document.getElementById("diachi").value;
+    console.log(ten, dob, cccd, diachi);
     localStorage.setItem('name', ten);
     localStorage.setItem('dob', dob);
-    localStorage.setItem('studentId', masv);
-    localStorage.setItem('class', malop);
+    localStorage.setItem('cccd', cccd);
+    localStorage.setItem('diachi', diachi);
 }
 
 

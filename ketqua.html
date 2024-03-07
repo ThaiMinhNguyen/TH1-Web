@@ -26,8 +26,8 @@
     <div class="card w-50 p-4 m-4">
         <h1>Kết quả bài test</h1>
         <p>Họ và tên: <strong><span id="ten"></span></strong></p>
-        <p>CCCD: <strong><span id="masv"></span></strong></p>
-        <p>Địa chỉ thường trú: <strong><span id="lop"></span></strong></p>
+        <p>CCCD: <strong><span id="cccd"></span></strong></p>
+        <p>Địa chỉ thường trú: <strong><span id="diachi"></span></strong></p>
         <p>Điểm của bạn là: <strong><span id="diemso"></span>/30</strong></p>
         <h2>Kết quả câu hỏi tự luận</h2>
         <br>
@@ -39,8 +39,8 @@
     <script>
         // tinhDiem();
         document.getElementById("ten").innerHTML = localStorage.getItem("name");
-        document.getElementById("masv").innerHTML = localStorage.getItem("studentId");
-        document.getElementById("lop").innerHTML = localStorage.getItem("class");
+        document.getElementById("cccd").innerHTML = localStorage.getItem("cccd");
+        document.getElementById("diachi").innerHTML = localStorage.getItem("diachi");
         document.getElementById("diemso").innerHTML = localStorage.getItem("diemtong");
         document.getElementById("ketQuaQ4").innerHTML = localStorage.getItem("ketquaQ4");
         console.log(localStorage.getItem("ketquaQ4"));
